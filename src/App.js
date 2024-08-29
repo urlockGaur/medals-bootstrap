@@ -16,6 +16,9 @@ class App extends Component {
             { id: 3, name: 'bronze' },
         ]
     }
+    handleAdd = (name) => {
+        console.log(name);
+    }
     handleIncrement = (countryId, medalName) => {
         const countries = [...this.state.countries];
         const idx = countries.findIndex(c => c.id === countryId);
@@ -52,7 +55,7 @@ class App extends Component {
                             onDecrement={this.handleDecrement} />
                     )}
                 </div>
-                <NewCountry />
+                <NewCountry onAdd={this.handleAdd} />
             </React.Fragment>
         );
     }
