@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Country from './components/Country';
+import NewCountry from './components/NewCountry';
 import './App.css';
 
 class App extends Component {
@@ -51,6 +52,7 @@ class App extends Component {
                             onDecrement={this.handleDecrement} />
                     )}
                 </div>
+                <NewCountry />
             </React.Fragment>
         );
     }
