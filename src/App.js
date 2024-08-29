@@ -23,7 +23,9 @@ class App extends Component {
         this.setState({ countries: mutableCountries });
     }
     handleDelete = (countryId) => {
-        console.log(countryId);
+        const { countries } = this.state;
+        const mutableCountries = [...countries].filter(c => c.id !== countryId);
+        this.setState({ countries: mutableCountries });
     }
     handleIncrement = (countryId, medalName) => {
         const countries = [...this.state.countries];
