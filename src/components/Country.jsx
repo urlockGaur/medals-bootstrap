@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 
 class Country extends Component {
     state = {
-        name: 'United States',
-        gold: 0,
+        name: this.props.country.name,
+        gold: this.props.country.gold,
     }
     handleIncrement = () => this.setState({ gold: this.state.gold + 1 });
     render() {
         return (
             <div className="country">
                 <div className="name">
-                    { this.state.name }
+                    {this.state.name}
                 </div>
                 <div className="medals">
-                    gold medals: { this.state.gold }
-                    <button onClick={ this.handleIncrement }>+</button>
+                    gold medals: {this.state.gold}
+                    <button onClick={this.handleIncrement}>+</button>
                 </div>
                 <hr />
             </div>
