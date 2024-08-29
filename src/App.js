@@ -6,7 +6,11 @@ class App extends Component {
     state = {}
     render() {
         return (
-            <Country />
+            <React.Fragment>
+                <Country />
+                <Country />
+                <Country />
+            </React.Fragment>
         );
     }
 }
